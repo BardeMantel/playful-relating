@@ -136,13 +136,12 @@ p {
 }
 
 .title-box {
-  background-color: #81aca6;
-  color: white;
-  border: solid 3px;
+  background-color: white;
+  color: #5a7874;
+  border: solid 0px;
   border-radius: 4px;
-  border-color: white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .row {
