@@ -1,33 +1,43 @@
-const toggle = document.getElementById('menu-toggle');
-const links = document.getElementById('nav-links');
+console.log("script loaded");
 
-toggle.addEventListener('click', () => {
-  links.classList.toggle('open');
-});
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM ready");
 
-const form = document.getElementById("newsletter-form");
+  const form = document.getElementById("newsletter-form");
+  const status = document.getElementById("status");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  console.log("form:", form);
 
-  const formData = {
-    name: form.name.value,
-    email: form.email.value
-  };
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  const response = await fetch("
-https://script.google.com/macros/s/AKfycbw5sjw1N2bM6oyiayTpTry0JvmSPMx_MEtwVYez5KxeulDlIhX4-eI8i5571I91IPqI/exec
-", {
-    method: "POST",
-    body: JSON.stringify(formData)
+    console.log("submit triggered");
+
+    status.textContent = "Submitting...";
+
+    try {
+      const response = await fetch("YOUR_SCRIPT_URL_HERE", {
+        method: "POST",
+        body: JSON.stringify({
+          name: form.name.value,
+          email: form.email.value
+        })
+      });
+
+      console.log("response received", response);
+
+      const data = await response.json();
+      console.log("parsed json", data);
+
+      status.textContent =
+        data.status === "success"
+          ? "Thanks for signing up!"
+          : "Something went wrong.";
+    } catch (err) {
+      console.error(err);
+      status.textContent = "Error (check console)";
+    }
+
+    form.reset();
   });
-
-  const result = await response.json();
-
-  document.getElementById("status").textContent =
-    result.status === "success"
-      ? "Thanks for signing up!"
-      : "Something went wrong.";
-  
-  form.reset();
 });
