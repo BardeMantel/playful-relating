@@ -20,13 +20,9 @@ body {
 }
 
 main {
+  max-width: 600px;
   flex: 1;
   padding: 1rem;
-}
-
-.sitebody  {
-  display: flex;
-  max-width: 600px;
 }
 
 footer {
@@ -111,7 +107,6 @@ h3 {
 p {
   font-size: 1rem;
   text-align: justify;
-  max-width: 600px;
   margin: 0 auto;
 }
 
