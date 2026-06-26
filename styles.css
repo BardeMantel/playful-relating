@@ -110,6 +110,13 @@ p {
   margin: 0 auto;
 }
 
+p.left {
+  font-size: 1rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .box {
   background-color: #5983b0;
   padding: 20px;
