@@ -135,6 +135,16 @@ p {
   font-size: 1.2rem;
 }
 
+.title-box {
+  background-color: #81aca6;
+  color: white;
+  border: solid 3px;
+  border-radius: 4px;
+  border-color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .row {
   display: flex;
   justify-content: center;
