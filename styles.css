@@ -24,6 +24,11 @@ main {
   padding: 1rem;
 }
 
+.sitebody  {
+  display: flex;
+  max-width: 600px;
+}
+
 footer {
   background-color: #5a7874;
   color: white;
