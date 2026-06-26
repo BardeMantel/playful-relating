@@ -15,7 +15,9 @@ form.addEventListener("submit", async (e) => {
     email: form.email.value
   };
 
-  const response = await fetch("", {
+  const response = await fetch("
+https://script.google.com/macros/s/AKfycbw5sjw1N2bM6oyiayTpTry0JvmSPMx_MEtwVYez5KxeulDlIhX4-eI8i5571I91IPqI/exec
+", {
     method: "POST",
     body: JSON.stringify(formData)
   });
