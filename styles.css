@@ -419,7 +419,7 @@ p.small {
 /* make eventboxes narrower and non-displaced on small screens */
 @media (max-width: 600px) {
   .eventbox {
-    width: 350px;
+    width: 330px;
   }
 
   .uneven {
