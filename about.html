@@ -3,39 +3,90 @@
   <head>
     <title>About Us</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WEBSITE DESCRIPTION GOES HERE" />
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="https://i.imgur.com/l42uuvq.png" sizes="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <nav>
-      <div class="left">
-        <a href="index.html">
-          <img src="https://i.imgur.com/iRaklYu.png" alt="Playful Relating" style="height: 100px; width: auto;">
-        </a>
+    <header>
+      
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="nav-left">
+          <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto;" alt="Home"></a>
+        </div>
+
+        <div class="nav-center nav-links" id="nav-links">
+          <a href="home.html">Home</a>
+          <a href="events.html">All Events</a>
+          <a href="games.html">Games</a>
+          <a href="about.html" aria-current="page">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <button class="nav-toggle" id="nav-toggle">☰</button>
+          <a href="de/about.html" class="nav-language">DE</a>
+        </div>
+      </nav>
+
+      <script>
+        const header = document.querySelector("header");
+        
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 180) {
+            header.classList.add("faded");
+          } else {
+            header.classList.remove("faded");
+          }
+        });
+      </script>
+    </header>
+    
+    <!-- Primary content -->
+    <main>
+      <h>About Us</h>
+      <!-- Lennart CV -->
+      <div class="cvbox lennart" style="margin-top: 20px;">
+        <div class="column">
+          <img src="https://i.imgur.com/UH5tHux.png" style="height: 150px; width: auto;">
+          <p style="text-align: center;">Lennart</p>
+        </div>
+          <p>
+            Here goes all the information about Lennart.
+          </p>
       </div>
 
-      <div class="center nav-links" id="nav-links">
-        <a href="events.html">All Events</a>
-        <a href="about.html" aria-current="page">About Us</a>
-        <a href="games.html">Games</a>
-        <a href="contact.html">Contact</a>
+    <!-- Laszlo CV -->
+    <div class="cvbox laszlo" style="margin-bottom: 20px;">
+      <div class="column">
+        <img src="https://i.imgur.com/OXj45qz.png" style="height: 150px; width: auto;">
+        <p style="text-align: center;">Laszlo</p>
       </div>
-      
-      <div class="right">
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <a href="de/about.html" class="language-btn">DE</a>
-      </div>
-    </nav>
-    <main>
-      <h1>About Us</h1>
-      <div class="row">
-        <p>This will be a place for fotos and text about Lennart and Laszlo.</p>
-      </div>
+      <p>
+        Here goes all the information about sleepy boy Laszlo.
+      </p>
+    </div>
+
     </main>
+
+    <!-- Copyright Footer -->
     <footer>
-      © 2026 Playful Relating. All rights reserved.
-    </footer>
+    <p style="text-align: right;">&copy; <span id="year"></span> Playful Relating. All rights reserved.</p>
+
+      <script>
+        document.getElementById("year").textContent =
+          new Date().getFullYear();
+      </script>
+    </footer>   
   </body>
 </html>
