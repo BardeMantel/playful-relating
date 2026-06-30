@@ -1,42 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Playful Relating</title>
+    <title>Playful Relating Games</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WEBSITE DESCRIPTION GOES HERE" />
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="https://i.imgur.com/l42uuvq.png" sizes="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <nav>
-      <div class="left">
-        <a href="index.html">
-          <img src="https://i.imgur.com/iRaklYu.png" alt="Playful Relating" style="height: 100px; width: auto;">
-        </a>
+    <header>
+      
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="nav-left">
+          <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto;" alt="Home"></a>
+        </div>
+
+        <div class="nav-center nav-links" id="nav-links">
+          <a href="home.html">Home</a>
+          <a href="events.html">All Events</a>
+          <a href="games.html" aria-current="page">Games</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <button class="nav-toggle" id="nav-toggle">☰</button>
+          <a href="de/games.html" class="nav-language">DE</a>
+        </div>
+      </nav>
+
+      <script>
+        const header = document.querySelector("header");
+        
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 180) {
+            header.classList.add("faded");
+          } else {
+            header.classList.remove("faded");
+          }
+        });
+      </script>
+    </header>
+    
+    <!-- Primary content -->
+    <main>
+      <h>The Foundation</h>
+      <p>
+        We can relate to one another in an uncountable number of ways. Accordingly, there is a great <a href="#resources" style="color: var(--text-body);">variety</a> of Relating Games.
+      </p>
+
+      <!-- Presencing Box -->
+      <div class="gamebox presencing" style="margin-top: 20px;">
+        <h class="left box">Presencing</h>
+        <p class="indent">
+          Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. Here goes information about Presencing and the Noticing Game. 
+        </p>
       </div>
 
-      <div class="center nav-links" id="nav-links">
-        <a href="events.html">All Events</a>
-        <a href="about.html">About Us</a>
-        <a href="games.html" aria-current="page">Games</a>
-        <a href="contact.html">Contact</a>
+      <!-- Curiosity Box -->
+      <div class="gamebox curiosity" style="margin-bottom: 20px;">
+        <h class="left box">Curiosity</h>
+        <p class="indent">
+          Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. Here goes information about curiosity and the curiosity game. 
+        </p>
+      </div>
+      <div class="divider"></div>
+
+      <!-- Resources -->
+      <h id="resources">Resources</h>
+      <div class="pair">
+        <div class="half1">
+          <img src="https://i.imgur.com/MakHqLi.jpeg" style="height: 150px; width: auto;" alt="bookcover">
+        </div>
+        <div class="half2">
+          <p>The <em><b>Authentic Relating Games Manual</b></em> by <a href="https://www.authrev.org/ar-games-manual"><em style="text-decoration: none; color: gray;">Authentic Revolution</em></a> is a good collection of a variety of Relating Games. A very solid reference to get going.</p>
+        </div>
       </div>
       
-      <div class="right">
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <a href="de/games.html" class="language-btn">DE</a>
-      </div>
-    </nav>
-    <main>
-      <h1>The foundational Games</h1>
-      <h2>Noticing</h2>
-      <p>Here we will add an explanation and possible images for the <em>Noticing</em> game.</p>
-      <h2>Curiosity</h2>
-      <p>Here we will add an explanation and possible images for the <em>Curiosity</em> game.</p>
     </main>
+
+    <!-- Copyright Footer -->
     <footer>
-      © 2026 Playful Relating. All rights reserved.
-    </footer>
+      <p style="text-align: right;">&copy; <span id="year"></span> Playful Relating. All rights reserved.</p>
+
+      <script>
+        document.getElementById("year").textContent =
+          new Date().getFullYear();
+      </script>
+    </footer>   
   </body>
 </html>
