@@ -71,6 +71,7 @@ html {
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
   font-family: "Lato", sans-serif;
 }
@@ -79,6 +80,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 
   background-color: var(--body-background);
   color: var(--body-text);
@@ -349,18 +351,6 @@ p.small {
   font-size: 0.75rem;
 }
 
-p.eventtime {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-p.eventname {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-}
-
 .textbox {
   margin: 20px auto;
   border-radius: var(--box-border-radius);
@@ -405,6 +395,47 @@ p.eventname {
   transform: translateX(var(--eventbox-offset)) skew(var(--eventbox-skew));
 }
 
+.boxbadge {
+  width: fit-content;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* make eventboxes narrower and non-displaced on small screens */
+@media (max-width: 600px) {
+  .eventbox {
+    width: 350px;
+  }
+
+  .uneven {
+    transform: none;
+  }
+
+  .even {
+    transform: none;
+  }
+
+  .boxbadge {
+    max-width: 4.5rem;
+    text-align: center;
+  }
+}
+
 .eventbox.playful {
   background: linear-gradient(
     var(--eventbox-gradient-degree),
@@ -423,24 +454,29 @@ p.eventname {
   color: var(--eventbox-mindful-text);
 }
 
-.boxbadge {
-  width: fit-content;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  height: 1.5rem;
-
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-
+.eventbar {
   display: flex;
-  align-items: center;
-  background-color: black;
-  border-radius: 999px;
+  justify-content: space-between;
+}
 
-  color: white;
-  font-size: 0.75rem;
+.eventdate {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.4rem;
   font-weight: bold;
+  line-height: 0.8;
+}
+
+.eventtime {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.eventname {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .nexteventbadge {
@@ -456,7 +492,7 @@ p.eventname {
   display: flex;
   align-items: center;
   background-color:white;
-  border-radius: 999px;
+  border-radius: 10px;
 
   color: black;
   font-size: 0.75rem;
@@ -502,8 +538,6 @@ p.eventname {
   }
 }
 
-
-
 .cvbox.irinej {
   background: linear-gradient(
     var(--cvbox-gradient-degree),
@@ -534,4 +568,11 @@ p.eventname {
   color: var(--cvbox-lennart-text);
 }
 
+.shadedbox {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  padding: 10px;
+  background: rgb(0 0 0 / 20%);
+}
 /* ===== Utilities ===== */
