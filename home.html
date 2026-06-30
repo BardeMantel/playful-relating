@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Playful Relating</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WEBSITE DESCRIPTION GOES HERE" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="https://i.imgur.com/l42uuvq.png" sizes="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="nav-left">
+          <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto;" alt="Home"></a>
+        </div>
+
+        <div class="nav-center nav-links" id="nav-links">
+          <a href="home.html" aria-current="page">Home</a>
+          <a href="events.html">All Events</a>
+          <a href="games.html">Games</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-right">
+          <button class="nav-toggle" id="nav-toggle">☰</button>
+          <a href="de/home.html" class="nav-language">DE</a>
+        </div>
+      </nav>
+
+      <script>
+        const header = document.querySelector("header");
+        
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 180) {
+            header.classList.add("faded");
+          } else {
+            header.classList.remove("faded");
+          }
+        });
+      </script>
+    </header>
+    
+    <!-- Primary content -->
+    <main>
+      <h>Playful Relating</h>
+      
+      <!-- Showing next event -->
+        
+      <div class="eventbox playful">
+        <div class="unskew">
+          <div class="nexteventbadge">NEXT EVENT</div>
+          <p class="eventtime">
+            <b>30.06.2026</b>
+            <b>19.00h - 21.30h</b>
+          </p>
+          <p class="eventname">PLAYFUL RELATING</p>
+          <p>Kastanienalle 79, 10435 Berlin</p>
+          <p class="small">1st Courtyard, Door to the right, 2nd Floor.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <!-- Main Text -->
+      <h class="left">WHAT <span style="font-size: 1rem;">is it?</span></h>
+      <p class="indent">
+        Playful Relating is an explorative practice of open and mindful togetherness. A range of communication games serve as frames for varied encounters, practicing our listening and self-perception in contact with others.      
+      </p>
+
+      <div class="divider"></div>
+
+      <h class="left">WHY <span style="font-size: 1rem;">do it?</span></h>
+      <p class="indent">
+        Playful Relating can touch on our lives in many different ways, which is why we don’t want to impose a fixed idea about why to do it. Instead, we want to encourage everyone to stay open and explore your own relationship to the practice. That being said, here are two basic ideas as a starting point of that exploration.<br><br>
+        <em><b>Relating is fun! </b></em>  … <br><br>
+        <em><b>Relating can be hard! </b></em>Despite our best intentions and efforts, it can be incredibly difficult to come and be together, to communicate with and understand each other. But despite this difficulty and despite the important role that relationships play in our well-being and mental health, most of us rarely practice basic relational skills. Playful Relating gives us an opportunity to do just that. Different games place the focus on different basic relational skills, allowing us work out those relating muscles, to practice our attention and self-perception, our curiosity and listening. And much like your physical workouts, you will find that these skills can transfer into the rest of your life and relationships.  
+      </p>
+    </main>
+
+    <!-- Copyright Footer -->
+    <footer>
+    <p style="text-align: right;">&copy; <span id="year"></span> Playful Relating. All rights reserved.</p>
+
+      <script>
+        document.getElementById("year").textContent =
+          new Date().getFullYear();
+      </script>
+    </footer>   
+  </body>
+</html>
