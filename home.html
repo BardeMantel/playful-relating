@@ -13,54 +13,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <script type="module" src="script.js"></script>
+ 
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <header>
-      
-      <!-- Navigation Bar -->
+        
+    <!-- Navigation Bar -->
       <nav>
         <div class="nav-left">
           <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto;" alt="Home"></a>
         </div>
 
-        <div class="nav-center nav-links" id="nav-links">
+        <!-- container for the links in the navigation bar / drop-down menu -->
+        <div class="nav-center nav-links" id="nav-dropdown">
           <a href="home.html" aria-current="page">Home</a>
-          <a href="events.html">All Events</a>
-          <a href="games.html">Games</a>
-          <a href="about.html">About Us</a>
+          <a href="events.html">Events</a>
+
+          <!-- button that triggers the about-dropdown menu -->
+          <div class="dropdown-toggle" id="about-toggle">About</div>
+        
           <a href="contact.html">Contact</a>
         </div>
 
+        <!-- about-dropdown menu (usually hidden)-->      
+        <div class="about-dropdown" id="about-dropdown">
+          <div class="dropdown-toggle returnmenu" id="back-from-about">←</div>
+          <a href="about-us.html">About Us</a>
+          <a href="about-playful-relating.html">What is Playful Relating?</a>
+          <a href="about-games.html">What kind of Games?</a>
+        </div>
+
+        <!-- dropdown-menu toggle and language button -->
         <div class="nav-right">
-          <button class="nav-toggle" id="nav-toggle">☰</button>
+          <button class="nav-dropdown-toggle" id="nav-dropdown-toggle">☰</button>
           <a href="de/home.html" class="nav-language">DE</a>
         </div>
       </nav>
-
-      <script>
-        const header = document.querySelector("header");
-        
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 180) {
-            header.classList.add("faded");
-          } else {
-            header.classList.remove("faded");
-          }
-        });
-      </script>
     </header>
     
     <!-- Primary content -->
     <main>
-      <h>Playful Relating</h>
+      
       
       <!-- Showing next event -->
         
-      <div class="eventbox playful">
+      <div class="eventbox next playful mb-20">
         <div class="unskew">
-          <div class="nexteventbadge">NEXT EVENT</div>
+          <div class="eventbadge">NEXT EVENT</div>
           <div class="eventbar">
             <div class="eventdate">
               30.06.
@@ -77,21 +77,16 @@
         </div>
       </div>
 
-      <div class="divider"></div>
       <!-- Main Text -->
-      <h class="left">WHAT <span style="font-size: 1rem;">is it?</span></h>
-      <p class="indent">
-        Playful Relating is an explorative practice of open and mindful togetherness. A range of communication games serve as frames for varied encounters, practicing our listening and self-perception in contact with others.      
-      </p>
+      <h class="page">Playful Relating</h>
+      <div class="plaintext">
+        <p>An explorative practice of open and mindful togetherness.<br></p>
+        <p>Come join us to play a range of relating games and practice your relational skills.</p>
+      </div>
 
-      <div class="divider"></div>
+      
+      
 
-      <h class="left">WHY <span style="font-size: 1rem;">do it?</span></h>
-      <p class="indent">
-        Playful Relating can touch on our lives in many different ways, which is why we don’t want to impose a fixed idea about why to do it. Instead, we want to encourage everyone to stay open and explore your own relationship to the practice. That being said, here are two basic ideas as a starting point of that exploration.<br><br>
-        <em><b>Relating is fun! </b></em>  … <br><br>
-        <em><b>Relating can be hard! </b></em>Despite our best intentions and efforts, it can be incredibly difficult to come and be together, to communicate with and understand each other. But despite this difficulty and despite the important role that relationships play in our well-being and mental health, most of us rarely practice basic relational skills. Playful Relating gives us an opportunity to do just that. Different games place the focus on different basic relational skills, allowing us work out those relating muscles, to practice our attention and self-perception, our curiosity and listening. And much like your physical workouts, you will find that these skills can transfer into the rest of your life and relationships.  
-      </p>
     </main>
 
     <!-- Copyright Footer -->
@@ -102,6 +97,6 @@
         document.getElementById("year").textContent =
           new Date().getFullYear();
       </script>
-    </footer>   
+    </footer>
   </body>
 </html>
