@@ -14,50 +14,52 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <script type="module" src="script.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <header>
-      
-      <!-- Navigation Bar -->
+        
+    <!-- Navigation Bar -->
       <nav>
         <div class="nav-left">
           <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto;" alt="Home"></a>
         </div>
 
-        <div class="nav-center nav-links" id="nav-links">
+        <!-- container for the links in the navigation bar / drop-down menu -->
+        <div class="nav-center nav-links" id="nav-dropdown">
           <a href="home.html">Home</a>
-          <a href="events.html">All Events</a>
-          <a href="games.html">Games</a>
-          <a href="about.html">About Us</a>
+          <a href="events.html">Events</a>
+
+          <!-- button that triggers the about-dropdown menu -->
+          <div class="dropdown-toggle" id="about-toggle">About</div>
+        
           <a href="contact.html" aria-current="page">Contact</a>
         </div>
 
+        <!-- about-dropdown menu (usually hidden)-->      
+        <div class="about-dropdown" id="about-dropdown">
+          <div class="dropdown-toggle returnmenu" id="back-from-about">←</div>
+          <a href="about-us.html">About Us</a>
+          <a href="about-playful-relating.html">What is Playful Relating?</a>
+          <a href="about-games.html">What kind of Games?</a>
+        </div>
+
+        <!-- dropdown-menu toggle and language button -->
         <div class="nav-right">
-          <button class="nav-toggle" id="nav-toggle">☰</button>
-          <a href="de/contact.html" class="nav-language">DE</a>
+          <button class="nav-dropdown-toggle" id="nav-dropdown-toggle">☰</button>
+          <a href="de/home.html" class="nav-language">DE</a>
         </div>
       </nav>
-
-      <script>
-        const header = document.querySelector("header");
-        
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 180) {
-            header.classList.add("faded");
-          } else {
-            header.classList.remove("faded");
-          }
-        });
-      </script>
     </header>
     
     <!-- Primary content -->
     <main>
       <!-- Box that shows next event -->
-      <h>Contact</h>
-      <p>Reach us at <em><b>contact@playful-relating.de</b></em>!</p>
-      <p><br>You can also sign up to our <b>Newsletter</b> or <b>Signal Group</b> to never miss an upcoming event.</p>
+      <h class="page">Contact</h>
+      <div class="plaintext">
+        <p>Reach us at <em><b>contact@playful-relating.de</b></em>!</p>
+        <p><br>You can also sign up to our <b>Newsletter</b> or <b>Signal Group</b> to never miss an upcoming event.</p>
+      </div>
     </main>
 
     <!-- Copyright Footer -->
