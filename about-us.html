@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About Us</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WEBSITE DESCRIPTION GOES HERE" />
 
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="https://i.imgur.com/l42uuvq.png" sizes="32x32" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+        
+    <!-- Navigation Bar -->
+      <nav>
+        <div class="nav-left">
+          <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto;" alt="Home"></a>
+        </div>
+
+        <!-- container for the links in the navigation bar / drop-down menu -->
+        <div class="nav-center nav-links" id="nav-dropdown">
+          <a href="home.html">Home</a>
+          <a href="events.html">Events</a>
+
+          <!-- button that triggers the about-dropdown menu -->
+          <div class="dropdown-toggle" aria-current="page" id="about-toggle">About</div>
+        
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- about-dropdown menu (usually hidden)-->      
+        <div class="about-dropdown" id="about-dropdown">
+          <div class="dropdown-toggle returnmenu" id="back-from-about">←</div>
+          <a href="about-us.html" aria-current="page">About Us</a>
+          <a href="about-playful-relating.html">What is Playful Relating?</a>
+          <a href="about-games.html">What kind of Games?</a>
+        </div>
+
+        <!-- dropdown-menu toggle and language button -->
+        <div class="nav-right">
+          <button class="nav-dropdown-toggle" id="nav-dropdown-toggle">☰</button>
+          <a href="de/home.html" class="nav-language">DE</a>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Primary content -->
+    <main>
+      <h class="page">About Us</h>
+      <div id="randomization-container" style="width: 100%;">
+        <!-- Lennart CV -->
+        <div class="cvbox lennart">
+          <div class="column">
+            <img src="https://i.imgur.com/UH5tHux.png" style="height: 150px; width: auto;">
+            <p class="cvname">Lennart</p>
+          </div>
+            <p>
+              Here goes all the information about Lennart.
+            </p>
+        </div>
+
+        <!-- Laszlo CV -->
+        <div class="cvbox laszlo">
+          <div class="column">
+            <img src="https://i.imgur.com/OXj45qz.png" style="height: 150px; width: auto;">
+            <p class="cvname">Laszlo</p>
+          </div>
+          <p>
+            Here goes all the information about sleepy boy Laszlo.
+          </p>
+        </div>
+      </div>
+
+    <!-- Irinej CV -->
+    <div class="cvbox irinej mt-20">
+    <div class="column">
+      <img src="https://i.imgur.com/sf4X7K4.png" style="height: 150px; width: auto;">
+      <p class="cvname">Irinej</p>
+    </div>
+    <p>
+      Here goes all the information about stoned boy Irinej.
+    </p>
+  </div>
+
+    </main>
+
+    <!-- Copyright Footer -->
+    <footer>
+    <p style="text-align: right;">&copy; <span id="year"></span> Playful Relating. All rights reserved.</p>
+
+      <script>
+        document.getElementById("year").textContent =
+          new Date().getFullYear();
+      </script>
+    </footer>   
+  </body>
+</html>
