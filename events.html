@@ -7,61 +7,54 @@
     <meta name="description" content="WEBSITE DESCRIPTION GOES HERE" />
 
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://i.imgur.com/l42uuvq.png"
-      sizes="32x32"
-    />
+    <link rel="icon" type="image/png" href="https://i.imgur.com/l42uuvq.png" sizes="32x32" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
-    <script type="module" src="script.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <header>
-      <!-- Navigation Bar -->
+        
+    <!-- Navigation Bar -->
       <nav>
         <div class="nav-left">
-          <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto" alt="Home" /></a>
+          <a href="home.html"><img src="https://i.imgur.com/cTtr4vh.png" alt="Playful Relating" style="height: 60px; width: auto;" alt="Home"></a>
         </div>
 
-        <div class="nav-center nav-links" id="nav-links">
+        <!-- container for the links in the navigation bar / drop-down menu -->
+        <div class="nav-center nav-links" id="nav-dropdown">
           <a href="home.html">Home</a>
-          <a href="events.html" aria-current="page">All Events</a>
-          <a href="games.html">Games</a>
-          <a href="about.html">About Us</a>
+          <a href="events.html" aria-current="page">Events</a>
+
+          <!-- button that triggers the about-dropdown menu -->
+          <div class="dropdown-toggle" id="about-toggle">About</div>
+        
           <a href="contact.html">Contact</a>
         </div>
 
+        <!-- about-dropdown menu (usually hidden)-->      
+        <div class="about-dropdown" id="about-dropdown">
+          <div class="dropdown-toggle returnmenu" id="back-from-about">←</div>
+          <a href="about-us.html">About Us</a>
+          <a href="about-playful-relating.html">What is Playful Relating?</a>
+          <a href="about-games.html">What kind of Games?</a>
+        </div>
+
+        <!-- dropdown-menu toggle and language button -->
         <div class="nav-right">
-          <button class="nav-toggle" id="nav-toggle">☰</button>
-          <a href="de/events.html" class="nav-language">DE</a>
+          <button class="nav-dropdown-toggle" id="nav-dropdown-toggle">☰</button>
+          <a href="de/home.html" class="nav-language">DE</a>
         </div>
       </nav>
-
-      <script>
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 180) {
-            header.classList.add('faded');
-          } else {
-            header.classList.remove('faded');
-          }
-        });
-      </script>
     </header>
 
     <!-- Primary content -->
     <main>
-      <h>Upcoming Events</h>
+      <h class="page">Upcoming Events</h>
 
       <!-- Event 1 -->
       <div class="eventbox playful uneven">
@@ -106,7 +99,6 @@
       <!-- Event 3 -->
       <div class="eventbox playful uneven">
         <div class="unskew">
-          <div class="nexteventbadge">SPECIAL GUEST</div>
           <div class="eventbar">
             <div class="eventdate">
               12.08.
@@ -117,6 +109,7 @@
             </div>
           </div>
           
+          <div class="eventbadge special">SPECIAL GUEST</div>
           <div class="eventname">
             PLAYFUL RELATING<br /><span style="font-size: 0.8rem">with </span
             ><em>Irinej Papuga</em>
@@ -124,19 +117,21 @@
           <p>Holzmarktstraße 33, 10243 Berlin</p>
           <p class="small">Radialsystem (Studio A) on 5th floor.</p>
         </div>
-        <div class="boxbadge">SPECIAL GUEST</div>
       </div>
       <!-- End Event 3 -->
 
       <div class="divider"></div>
 
       <!-- Main Text -->
-      <h class="left" id="title-explanation">What do the titles mean?</h>
-      <p class="indent">
-        <b>Playful Relating</b><br>
-        Explanation of Playful Relating.<br><br>
-        <b>Mindful Relating</b><br>
-        Explanation of Mindful Relating.<br>
+      <div class="plaintext">
+        <h class="left" id="title-explanation">What do the titles mean?</h>
+        <p class="indent">
+          <b>Playful Relating</b><br>
+          Unless specified otherwise, these events do not have any particular focus in the games that will be played.<br><br>
+          <b>Mindful Relating</b><br>
+          These events place a particular focus on the aspect of mindfulness in the games that are played.<br>
+        </p>
+      </div>
     </main>
 
     <!-- Copyright Footer -->
