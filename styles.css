@@ -316,7 +316,7 @@ nav a[aria-current='page'] {
 }
 
 /* Adjusted Navbar when screen gets too narrow */
-@media (max-width: 750px) {
+@media (max-width: 550px) {
   /* contains all the links and buttons in the navbar */
   .nav-links {
     position: fixed;
